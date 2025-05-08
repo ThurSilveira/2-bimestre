@@ -6,6 +6,10 @@ function PesquisaSatisfacao(){
     let menor = 0
     while (conta <= 10){
         nota = Number(prompt(`Informe sua nota de satisfação ${conta}`)) // prompt para o usuário informar a nota
+        if (nota < 0 || nota > 10 ){
+            alert (`Nota Inválida`)
+            continue // volta para o inicio do loop
+        }
         if (nota >= 8){
             maior++
         }
@@ -16,7 +20,5 @@ function PesquisaSatisfacao(){
         conta++ // conta = conta + 1
     }
     let media = soma / 10
-    alert(`A média das notas são: ${media.toFixed(1)}`)
-    alert(`A quantidade de satisfeitos são: ${maior.toFixed(1)}`)
-    alert(`A quantidade de insatisfeitos são:  ${menor.toFixed(1)}`)
+    alert(`A média das notas são: ${media.toFixed(1)}\nA quantidade de satisfeitos são: ${maior.toFixed(1)}\nA quantidade de insatisfeitos são:  ${menor.toFixed(1)}`)
 }
