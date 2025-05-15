@@ -1,33 +1,28 @@
-function gp4() {
-    // Criar um array para armazenar os grupos
-    let todosElementos = [];
+function gp4(){
+    let a, b, c, d, aux
+    let grupo = 1
+    while(grupo <=5){
+        a = Number(prompt(`Informe o valor de A`))
+        b = Number(prompt(`Informe o valor de B`))
+        c = Number(prompt(`Informe o valor de C`))
+        d = Number(prompt(`Informe o valor de D`))
+        let conta = 1
 
-    // Ler 5 grupos com 4 elementos (A, B, C, D)
-    for (let i = 0; i < 5; i++) {
-        let grupo = [];
-        for (let j = 0; j < 4; j++) {
-            let elemento = prompt(`Digite o elemento ${String.fromCharCode(65 + j)} do grupo ${i + 1}:`);
-            grupo.push(elemento);
+        alert (`Ordem Lida ${a} ${b} ${c} ${d}`)
+
+        while (conta <= 3){
+            if (a > b){
+                aux = a; a = b; b = aux;
+            }
+            if (b > c){
+                aux = b; b = c; c = aux;
+            }
+            if (c > d){
+                aux = c; c = d; d = aux;
+            }
+            conta++
         }
-        // Adicionar o grupo ao array de grupos
-        todosElementos.push(grupo);
+        alert(`Ordem Crescente ${a} ${b} ${c} ${d}\nOrdem Decrescente ${d} ${c} ${b} ${a}`)
+        grupo++
     }
-
-    // Exibir os grupos inseridos, com suas versões em ordem crescente e decrescente
-    let mensagem = "";
-    todosElementos.forEach((grupo, index) => {
-        // Exibir grupo na ordem em que foi lido
-        mensagem += `Grupo ${index + 1} (ordem lida): ${grupo.join(', ')}\n`;
-
-        // Ordenar o grupo em ordem crescente
-        let crescente = [...grupo].sort();
-        mensagem += `Grupo ${index + 1} (ordem crescente): ${crescente.join(', ')}\n`;
-
-        // Ordenar o grupo em ordem decrescente
-        let decrescente = [...crescente].reverse();
-        mensagem += `Grupo ${index + 1} (ordem decrescente): ${decrescente.join(', ')}\n\n`;
-    });
-
-    // Exibir todos os resultados
-    alert(mensagem);
 }
