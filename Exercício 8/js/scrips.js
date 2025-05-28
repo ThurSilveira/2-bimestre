@@ -18,5 +18,5 @@ function js(){
     }
     alert(`O total de pessoas com idade superior a 50 anos:  ${idademaior}`)
     alert(`A média das alturas das pessoas com idade entre 10 e 20 anos: ${altura12/pessoas12}`)
-    alert(`A porcentagem de pessoas com peso inferior a 40kg das demais: ${pesoinf * 100 / 5}%`)
+    alert(`A porcentagem de pessoas com peso inferior a 40kg das demais: ${(pesoinf / 5) * 100}%`)
 }
