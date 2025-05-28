@@ -22,4 +22,4 @@ function ex7(){
     alert(`O valor total das compras a vista foi: ${somav}`)
     alert(`O valor total das compras a prazo foi: ${somap}`)
     alert(`O valor da primeira parcela das compras a prazo foi: ${somap / 3}`)
-}               
+}   
