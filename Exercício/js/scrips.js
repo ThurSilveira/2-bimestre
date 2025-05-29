@@ -68,10 +68,10 @@ function js(){
             caso2++
             altura2 += altura
         }
-        else if(olho === `A`){
+        else if(olho === 'A'){
             caso3++
         }
-        else if(cabelo === `R` && olhos != `A`){
+        else if(cabelo === 'R' && olhos != 'A'){
             caso4++
         }
     }
