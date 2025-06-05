@@ -5,17 +5,14 @@ function js(){
     for(let i=0; i<10; i++){
         vet.push(Number(prompt(`Informe o ${i+1}° valor:`)))
     }
-    let pares = []
-    let impares = []
 
     for(let i=0; i<10; i++){
         if(vet[i] % 2 == 0){
-            pares.push(vet[i]+10)
+            vet[i] = vet[i]+10
         }
         else{
-            impares.push(vet[i]*3)
+            vet[i] = vet[i]*3
         }
     }
-    alert(`Quantidade de pares ${pares.length} - ${pares}`)
-    alert(`Quantidade de impares ${impares.length} - ${impares}`)
+    alert(`Vetor alterado ${vet}}`)
 }
