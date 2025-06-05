@@ -2,7 +2,10 @@ function js(){
     let vet = [] 
 
     for(let i = 0; i < 10; i++){
-        vet.push(Number(prompt(`informe o ${i+1}° grau de satisfação:\n(1 = Gostou muito)\n(2 = Gostou)\n(3 = Não Gostou)`)))
+        do{
+            vet[i] = (Number(prompt(`informe o ${i+1}° grau de satisfação:\n(1 = Gostou muito)\n(2 = Gostou)\n(3 = Não Gostou)`)))
+        }
+        while(vet[i] != 1 && vet[i] != 2 && vet[i] != 3)   
     }
     let um = 0, dois = 0, tres = 0
 
